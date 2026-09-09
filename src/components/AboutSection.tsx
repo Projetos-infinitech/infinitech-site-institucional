@@ -21,10 +21,10 @@ const AboutSection = () => {
                             </span>
                         </h2>
                         <p className="text-muted-foreground leading-relaxed mb-4">
-                            Somos a <strong className="text-foreground">Infinitech Jr</strong>, a Empresa Júnior de Ciência da Computação e Tecnologia do <strong className="text-foreground">IFSP (Câmpus Salto)</strong>. Formada por estudantes talentosos e apaixonados por resolver problemas reais através da tecnologia, nosso foco é entregar soluções de alto impacto com excelente custo-benefício.
+                            Somos a <strong className="text-foreground">Infinitech Jr</strong>, a Empresa Júnior dos cursos de Ciência da Computação, Análise e Desenvolvimento de Sistemas (ADS) e Tecnologia do <strong className="text-foreground">IFSP (Câmpus Salto)</strong>. Formada por estudantes talentosos e apaixonados por resolver problemas reais através da tecnologia, nosso foco é entregar soluções de alto impacto com excelente custo-benefício.
                         </p>
                         <p className="text-muted-foreground leading-relaxed">
-                            Especialistas em <strong className="text-foreground">desenvolvimento de sites</strong>, <strong className="text-foreground">desenvolvimento de sistemas</strong> e gestão estratégica de tráfego pago, ajudamos empresas em Salto, Indaiatuba, Itu, Campinas e região a acelerar seu crescimento no ambiente digital.
+                            Especialistas em <strong className="text-foreground">consultoria tecnológica</strong>, <strong className="text-foreground">desenvolvimento de sites</strong>, <strong className="text-foreground">desenvolvimento de sistemas</strong> e gestão estratégica de tráfego pago, ajudamos empresas em Salto, Indaiatuba, Itu, Campinas e região a acelerar seu crescimento no ambiente digital.
                         </p>
                     </motion.div>
                     
