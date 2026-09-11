@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Logo from "../assets/Logo_fundo_transparente2.png"
-import LogoWhite from "../assets/Logo_fundo_transparente-white.png"
+import Logo from "../assets/nova_logo_gradiente.svg"
+import LogoWhite from "../assets/nova_logo_branca.svg"
 const navLinks = [
     { label: "Diferencial", href: "#diferencial" },
-    { label: "Sobre Nós", href: "#sobre" },
+    { label: "Sobre Nós", hresf: "#sobre" },
     { label: "Cultura", href: "#cultura" },
     { label: "Serviços", href: "#servicos" },
     // { label: "Processo", href: "#processo" },
@@ -26,7 +26,7 @@ const Header = () => {
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
-            <div className="container mx-auto flex items-center justify-between h-16 px-4">
+            <div className="container mx-auto flex items-center justify-between h-16 px-1">
                 {/* Logo */}
                 <a
                     href="#"
@@ -35,7 +35,7 @@ const Header = () => {
                     {/* <span className="text-gradient">Infinitech</span>
                     <span className="text-foreground">Jr</span> */}
                     
-                    <img src={dark ? Logo : LogoWhite} className="scale-[0.8]" />
+                    <img src={dark ? LogoWhite : Logo} className="h-28 object-contain" />
                 </a>
 
                 {/* Desktop Nav */}
