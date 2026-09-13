@@ -69,7 +69,12 @@ const HeroSection = () => {
                                 <ArrowRight className="ml-2" size={18} />
                             </a>
                         </Button>
-                        <Button variant="hero-outline" size="lg" asChild>
+                        <Button
+                            variant="hero-outline"
+                            size="lg"
+                            className="bg-muted hover:bg-muted/80"
+                            asChild
+                        >
                             <a href="#processo">Como Funciona</a>
                         </Button>
                     </div>
