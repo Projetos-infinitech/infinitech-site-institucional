@@ -8,17 +8,29 @@ import IdentitySection from "@/components/MVVSection";
 import ServicesSection from "@/components/ServicesSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-
+import ValueSectionBento from "@/components/ValueSection_Bento";
+import ValueSectionEditorial from "@/components/ValueSection_Editorial";
+import ValueSectionIndustrial from "@/components/ValueSection_Industrial";
+import MVVSectionIndustrial from "@/components/MVVSection_Industrial";
 const Index = () => {
     return (
         <div className="min-h-screen">
             <Header />
             <HeroSection />
-            <ValueSection />
+
+            {/* <ValueSection /> */}
+            {/* <ValueSectionBento/> */}
+            <ValueSectionEditorial/>
+            {/* <ValueSectionIndustrial/> */}
+
             <AboutSection />
-            <IdentitySection />
+
+            {/* <IdentitySection /> */}
+            <MVVSectionIndustrial />
+
             <ServicesSection />
             {/* <ProcessSection /> */}
+            
             <ContactSection />
             <Footer />
             {/* <WhatsAppButton /> */}
