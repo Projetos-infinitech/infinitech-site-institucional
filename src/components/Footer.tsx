@@ -71,6 +71,14 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
+                                    href="#cultura"
+                                    className="hover:text-foreground transition-colors"
+                                >
+                                    Cultura
+                                </a>
+                            </li>
+                            <li>
+                                <a
                                     href="#sobre"
                                     className="hover:text-foreground transition-colors"
                                 >

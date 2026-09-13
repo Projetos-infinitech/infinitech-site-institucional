@@ -6,7 +6,7 @@ import Logo from "../assets/nova_logo_gradiente.svg"
 import LogoWhite from "../assets/nova_logo_branca.svg"
 const navLinks = [
     { label: "Diferencial", href: "#diferencial" },
-    { label: "Sobre Nós", hresf: "#sobre" },
+    { label: "Sobre Nós", href: "#sobre" },
     { label: "Cultura", href: "#cultura" },
     { label: "Serviços", href: "#servicos" },
     // { label: "Processo", href: "#processo" },
