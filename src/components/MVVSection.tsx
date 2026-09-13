@@ -90,7 +90,7 @@ const values = [
 
 const IdentitySection = () => {
     return (
-        <section id="identidade" className="section-padding">
+        <section id="cultura" className="section-padding">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

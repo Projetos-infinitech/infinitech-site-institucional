@@ -64,7 +64,7 @@ const values = [
 
 export const MVVSectionIndustrial = () => {
     return (
-        <section id="identidade" className="py-24 md:py-32 bg-background relative overflow-hidden border-y border-border/40">
+        <section id="cultura" className="py-24 md:py-32 bg-background relative overflow-hidden border-y border-border/40">
             {/* Fine tech grid background line */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(128,128,128,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(128,128,128,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
 
