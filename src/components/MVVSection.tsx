@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Target, Eye, Rocket, Handshake, Users, Cpu } from "lucide-react";
+import MVVImg from "../assets/mvv-img.png";
 
 // Missão e Visão
 const identity = [
@@ -16,6 +17,44 @@ const identity = [
             "Buscamos nos tornar a maior empresa júnior do IFSP, sendo referência para desenvolvimento de projetos de Tecnologia e como prestadora de serviços da região; além de facilitar oportunidades de crescimento para PMEs, impulsionando o desenvolvimento regional.",
     },
 ];
+
+// Seção "Meu problema é seu problema"
+const MVVDetailSection = () => {
+    return (
+        <div className="bg-muted/40 -mx-4 px-4 py-12 md:py-16 my-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+                <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="pr-12 md:order-2 text-right"
+                >
+                    <h2 className="text-3xl md:text-4xl font-display font-bold mt-3 mb-5">
+                        Seu problema é{" "}
+                        <span className="text-gradient">
+                            meu problema.
+                        </span>
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                        O principal lema da Infinitech reflete nossa valorização pelo trabalho em equipe e colaboração. Acreditamos que time unido alcança seus objetivos em comum e também transforma a forma como entregamos soluções aos nossos clientes.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                        Cada valor que cultivamos representa um pilar fundamental da nossa cultura e define como operamos, inovamos e crescemos juntos como uma empresa júnior.
+                    </p>
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="grid gap-4 bg-gradient-to-b from-[rgba(39,179,255,0.80)] to-[rgba(51,245,255,0.80)] w-full relative md:order-1"
+                >
+                    <img className="translate-x-4 -translate-y-4" src={MVVImg} />
+                </motion.div>
+            </div>
+        </div>
+    );
+};
 
 // Valores (Com o acróstico IN-FI-NI-TECH)
 const values = [
@@ -95,6 +134,9 @@ const IdentitySection = () => {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* MVV Detail Section - entre Missão/Visão e Valores */}
+                <MVVDetailSection />
 
                 {/* Seção de Valores */}
                 <motion.div
