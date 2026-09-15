@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
+import { DadosEmail, enviarEmail } from "@/lib/email";
 const challenges: string[] = [
     "Site lento ou desatualizado",
     "Poucas vendas online",
@@ -14,15 +14,16 @@ const challenges: string[] = [
 
 const ContactSection = () => {
     const { toast } = useToast();
-    const [form, setForm] = useState({
+    const [form, setForm] = useState<DadosEmail>({
         name: "",
         email: "",
         company: "",
         challenge: "",
-        customChallenge: "",
+        final_challenge: "",
     });
 
     const [otherSelected, setOtherSelected] = useState("");
+    const [honeypot, setHoneypot] = useState("");
     useEffect(() => {
         // Código executado quando 'otherSelected' mudar de valor
         console.log("O estado mudou para:", otherSelected);
@@ -32,11 +33,20 @@ const ContactSection = () => {
         }
     }, [otherSelected]);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
+        // Proteção contra spam (Honeypot): bots preenchem campos ocultos automaticamente
+        if (honeypot) {
+            toast({
+                title: "Mensagem enviada!",
+                description: "Entraremos em contato em até 24h.",
+            });
+            return;
+        }
+
         const isOtherInvalid =
-            form.challenge === "Outro" && !form.customChallenge.trim();
+            form.challenge === "Outro" && !form.final_challenge.trim();
 
         if (
             !form.name.trim() ||
@@ -52,21 +62,29 @@ const ContactSection = () => {
         }
 
         const finalChallenge =
-            form.challenge === "Outro" ? form.customChallenge : form.challenge;
+            form.challenge === "Outro" ? form.final_challenge : form.challenge;
 
-        console.log("Desafio enviado:", finalChallenge);
-        
-        toast({
-            title: "Mensagem enviada!",
-            description: "Entraremos em contato em até 24h.",
-        });
+        try {
+            await enviarEmail(form);
+
+            toast({
+                title: "Mensagem enviada!",
+                description: "Entraremos em contato em até 24h.",
+            });
+        } catch (e) {
+            toast({
+                title: "Erro ao enviar Email: " + e,
+                variant: "destructive",
+            });
+            return;
+        }
 
         setForm({
             name: "",
             email: "",
             company: "",
             challenge: "",
-            customChallenge: "",
+            final_challenge: "",
         });
     };
 
@@ -176,11 +194,11 @@ const ContactSection = () => {
                                 className="mt-3"
                             >
                                 <Input
-                                    value={form.customChallenge}
+                                    value={form.final_challenge}
                                     onChange={(e) =>
                                         setForm({
                                             ...form,
-                                            customChallenge: e.target.value,
+                                            final_challenge: e.target.value,
                                         })
                                     }
                                     placeholder="Descreva brevemente o seu desafio..."
@@ -190,6 +208,17 @@ const ContactSection = () => {
                             </motion.div>
                         )}
                     </div>
+
+                    {/* Campo Honeypot invisível para captura de bots de spam */}
+                    <input
+                        type="text"
+                        name="website"
+                        value={honeypot}
+                        onChange={(e) => setHoneypot(e.target.value)}
+                        style={{ display: "none" }}
+                        tabIndex={-1}
+                        autoComplete="off"
+                    />
 
                     <Button
                         type="submit"
