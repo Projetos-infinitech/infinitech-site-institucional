@@ -6,9 +6,10 @@ import { Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { DadosEmail, enviarEmail } from "@/lib/email";
 const challenges: string[] = [
-    "Site lento ou desatualizado",
-    "Poucas vendas online",
-    "Começando do zero",
+    "Desenvolvimento de Site",
+    "Desenvolvimento de Sistema",
+    "Desenvolvimento de Landing Page",
+    "Site desatualizado ou lento",
     "Outro",
 ];
 

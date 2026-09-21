@@ -15,9 +15,7 @@ const Footer = () => {
                             <span className="text-foreground">Jr</span>
                         </a>
                         <p className="text-sm text-muted-foreground mt-3 leading-relaxed max-w-xs">
-                            Empresa Júnior de Tecnologia focada em tráfego pago
-                            e desenvolvimento web. Transformando ideias em
-                            resultados digitais.
+                            A Infinitech Jr é a Empresa Júnior de TI do IFSP especialista em desenvolvimento de sites, desenvolvimento de sistemas e desenvolvimento de landing page.
                         </p>
                         <div className="flex gap-3 mt-4">
                             <a
@@ -121,11 +119,23 @@ const Footer = () => {
                             <br />
                             Salto, SP
                         </p>
-                        <div className="mt-6 flex flex-wrap gap-3">
-                            <span className="px-3 py-1.5 rounded-md bg-secondary text-xs text-muted-foreground font-medium">
+                        <div className="mt-6 flex flex-wrap gap-2">
+                            <span className="px-2.5 py-1 rounded-md bg-secondary text-xs text-muted-foreground font-medium">
+                                Empresa Júnior
+                            </span>
+                            <span className="px-2.5 py-1 rounded-md bg-secondary text-xs text-muted-foreground font-medium">
+                                Desenvolvimento de Sites
+                            </span>
+                            <span className="px-2.5 py-1 rounded-md bg-secondary text-xs text-muted-foreground font-medium">
+                                Desenvolvimento de Sistemas
+                            </span>
+                            <span className="px-2.5 py-1 rounded-md bg-secondary text-xs text-muted-foreground font-medium">
+                                Desenvolvimento de Landing Page
+                            </span>
+                            <span className="px-2.5 py-1 rounded-md bg-secondary text-xs text-muted-foreground font-medium">
                                 Brasil Júnior
                             </span>
-                            <span className="px-3 py-1.5 rounded-md bg-secondary text-xs text-muted-foreground font-medium">
+                            <span className="px-2.5 py-1 rounded-md bg-secondary text-xs text-muted-foreground font-medium">
                                 Núcleo Campinas
                             </span>
                         </div>

@@ -1,31 +1,31 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Globe2, LayoutTemplate, TrendingUp, Bot } from "lucide-react";
+import { Plus, Globe2, Code2, LayoutTemplate, Bot } from "lucide-react";
 
 const services = [
     {
         icon: Globe2,
-        title: "Sites personalizados",
+        title: "Desenvolvimento de Sites",
         description:
-            "Desenvolvemos o site da sua empresa do zero, com design responsivo, performance otimizada e uma identidade visual que transmite credibilidade ao seu público.",
+            "Especialistas em desenvolvimento de sites institucionais e corporativos do zero. Criamos soluções com design responsivo, alta performance e otimização para motores de busca (SEO) que transmitem autoridade e atraem novos clientes.",
+    },
+    {
+        icon: Code2,
+        title: "Desenvolvimento de Sistemas",
+        description:
+            "Desenvolvimento de sistemas web sob medida e plataformas personalizadas para automatizar processos da sua empresa. Construímos sistemas de gestão robustos, escaláveis e de fácil utilização.",
     },
     {
         icon: LayoutTemplate,
-        title: "Landing pages",
+        title: "Desenvolvimento de Landing Page",
         description:
-            "Páginas focadas em conversão para lançamentos, captação de leads ou campanhas específicas, com copy e estrutura pensadas para gerar resultado.",
-    },
-    {
-        icon: TrendingUp,
-        title: "Divulgação e campanha",
-        description:
-            "Planejamento e gestão de campanhas em Google Ads e Meta Ads, com acompanhamento de métricas e otimização contínua para reduzir custo por resultado.",
+            "O desenvolvimento de landing page focada em conversão é o melhor caminho para campanhas e captação de leads. Criamos landing pages ultrarrápidas, otimizadas para mobile e estrategicamente desenhadas para converter visitantes em clientes.",
     },
     {
         icon: Bot,
-        title: "Soluções em IA",
+        title: "Consultoria Tech & Soluções em IA",
         description:
-            "Automações, chatbots e integrações com inteligência artificial para otimizar processos internos e o atendimento ao seu cliente.",
+            "Consultoria em TI oferecida pela nossa Empresa Júnior. Desenvolvemos automações inteligentes, chatbots e campanhas estratégicas de tráfego pago para acelerar seus resultados digitais.",
     },
 ];
 

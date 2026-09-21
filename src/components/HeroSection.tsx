@@ -41,26 +41,24 @@ const HeroSection = () => {
 
                     <h1 className="font-display text-center mb-6">
                         {/* 1º Span */}
-                        <span className="block text-white text-[18px] md:text-[24px] lg:text-[29px] font-normal leading-[84%] tracking-[-1px] lg:tracking-[-1.74px] [text-shadow:3px_3px_1.8px_rgba(0,0,0,0.25)] mt-2 mb-3 lg:mt-3 lg:mb-5">
-                            Transformamos sua presença digital com
+                        <span className="block text-white text-[18px] md:text-[24px] lg:text-[28px] font-normal leading-[84%] tracking-[-1px] lg:tracking-[-1.74px] [text-shadow:3px_3px_1.8px_rgba(0,0,0,0.25)] mt-2 mb-3 lg:mt-3 lg:mb-5">
+                            Especialistas em desenvolvimento de sites, sistemas e landing pages
                         </span>
 
                         {/* 2º Span - Gradiente e Uppercase */}
-                        <span className="block text-transparent bg-clip-text bg-[linear-gradient(180deg,#0357FF_21.63%,#58D2FF_42.79%,#18EF64_97.12%)] text-[42px] md:text-[72px] lg:text-[122px] font-bold leading-[80%] tracking-[-3px] md:tracking-[-5px] lg:tracking-[-9.76px] uppercase mb-1 md:mb-2 lg:mb-3">
-                            sites de alta performance
+                        <span className="block text-transparent bg-clip-text bg-[linear-gradient(180deg,#0357FF_21.63%,#58D2FF_42.79%,#18EF64_97.12%)] text-[34px] md:text-[62px] lg:text-[96px] font-bold leading-[85%] tracking-[-2px] md:tracking-[-4px] lg:tracking-[-7px] uppercase mb-2 lg:mb-4">
+                            SITES, SISTEMAS & LANDING PAGES
                         </span>
 
                         {/* 3º Span - Uppercase */}
-                        <span className="block text-white text-[20px] md:text-[32px] lg:text-[43px] font-bold leading-[115%] tracking-[-1.5px] md:tracking-[-2px] lg:tracking-[-3.44px] uppercase">
-                            e anúncios que vendem.
+                        <span className="block text-white text-[18px] md:text-[28px] lg:text-[36px] font-bold leading-[115%] tracking-[-1.5px] md:tracking-[-2px] lg:tracking-[-2.5px] uppercase">
+                            A SUA EMPRESA JÚNIOR DE TECNOLOGIA
                         </span>
                     </h1>
 
-                    {/* <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-                            Soluções personalizadas em desenvolvimento web e gestão
-                            de tráfego pago para acelerar os resultados do seu
-                            negócio.
-                        </p> */}
+                    <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
+                        Somos a <strong className="text-white">Empresa Júnior</strong> do IFSP. Entregamos excelência em <strong className="text-white">desenvolvimento de sites</strong>, <strong className="text-white">desenvolvimento de sistemas sob medida</strong> e <strong className="text-white">desenvolvimento de landing pages</strong> de alta performance.
+                    </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Button variant="hero" size="lg" asChild>
