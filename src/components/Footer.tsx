@@ -15,7 +15,12 @@ const Footer = () => {
                             <span className="text-foreground">Jr</span>
                         </a>
                         <p className="text-sm text-muted-foreground mt-3 leading-relaxed max-w-xs">
-                            A Infinitech Jr é a Empresa Júnior de TI do IFSP especialista em desenvolvimento de sites, desenvolvimento de sistemas e desenvolvimento de landing page.
+                            A Infinitech Jr é a Empresa Júnior de TI do IFSP
+                            especialista em desenvolvimento de sites,
+                            desenvolvimento de sistemas e desenvolvimento de
+                            landing page.
+                            <br />
+                            comercial@infinitech.dev.br
                         </p>
                         <div className="flex gap-3 mt-4">
                             <a
