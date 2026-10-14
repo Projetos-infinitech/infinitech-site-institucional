@@ -1,4 +1,4 @@
-import { Linkedin, Instagram, Github } from "lucide-react";
+import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -29,7 +29,7 @@ const Footer = () => {
                                 aria-label="LinkedIn"
                                 className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
                             >
-                                <Linkedin size={18} />
+                                <FaLinkedin size={18} />
                             </a>
                             <a
                                 href="https://www.instagram.com/infinitech_jr/"
@@ -37,7 +37,7 @@ const Footer = () => {
                                 aria-label="Instagram"
                                 className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
                             >
-                                <Instagram size={18} />
+                                <FaInstagram size={18} />
                             </a>
                             <a
                                 href="https://github.com/Projetos-infinitech/"
@@ -45,7 +45,7 @@ const Footer = () => {
                                 aria-label="GitHub"
                                 className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
                             >
-                                <Github size={18} />
+                                <FaGithub size={18} />
                             </a>
                         </div>
                     </div>
