@@ -40,7 +40,8 @@ const values = [
         prefix: "FI",
         suffix: "ança",
         icon: Handshake,
-        description: "Confiamos uns nos outros para que tenham confiança em nós.",
+        description:
+            "Confiamos uns nos outros para que tenham confiança em nós.",
     },
     {
         id: "03",
@@ -49,7 +50,8 @@ const values = [
         prefix: "NI",
         suffix: "ão",
         icon: Users,
-        description: "Trabalhamos em equipe e com colaboração para alcançarmos objetivos comuns.",
+        description:
+            "Trabalhamos em equipe e com colaboração para alcançarmos objetivos comuns.",
     },
     {
         id: "04",
@@ -58,18 +60,21 @@ const values = [
         prefix: "TECH",
         suffix: "nologia",
         icon: Cpu,
-        description: "Utilizamos as melhores e mais modernas tecnologias do mercado, a fim de entregar o melhor produto final.",
+        description:
+            "Utilizamos as melhores e mais modernas tecnologias do mercado, a fim de entregar o melhor produto final.",
     },
 ];
 
 export const MVVSectionIndustrial = () => {
     return (
-        <section id="cultura" className="py-24 md:py-32 bg-background relative overflow-hidden border-y border-border/40">
+        <section
+            id="cultura"
+            className="py-24 md:py-32 bg-background relative overflow-hidden border-y border-border/40"
+        >
             {/* Fine tech grid background line */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(128,128,128,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(128,128,128,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
 
             <div className="container mx-auto px-4 max-w-7xl relative z-10">
-
                 {/* Header Industrial */}
                 <div className="border-b border-border/40 pb-12 mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
                     <div className="max-w-2xl">
@@ -78,11 +83,13 @@ export const MVVSectionIndustrial = () => {
                             [ DIRETRIZES E ESSÊNCIA // INFINITECH JR ]
                         </div>
                         <h2 className="text-4xl md:text-6xl font-display font-bold tracking-tight">
-                            Conheça a <span className="text-gradient">Infinitech Jr</span>
+                            Conheça a{" "}
+                            <span className="text-gradient">Infinitech Jr</span>
                         </h2>
                     </div>
                     <div className="md:max-w-xs font-mono text-xs text-muted-foreground leading-relaxed border-l border-border/40 pl-4">
-                        Somos movidos por propósitos claros que guiam cada linha de código que escrevemos e cada projeto que entregamos.
+                        Somos movidos por propósitos claros que guiam cada linha
+                        de código que escrevemos e cada projeto que entregamos.
                     </div>
                 </div>
 
@@ -121,62 +128,6 @@ export const MVVSectionIndustrial = () => {
                     ))}
                 </div>
 
-                {/* Seção "Seu problema é meu problema" em formato Blueprint / Industrial */}
-                <div className="border border-border/40 bg-secondary/5 relative overflow-hidden mb-20 p-8 md:p-12">
-                    <div className="absolute top-3 right-4 font-mono text-[9px] text-muted-foreground/40">
-                        [ CORE-PHILOSOPHY // LEMA-01 ]
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <motion.div
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="space-y-6"
-                        >
-                            <div className="text-[10px] font-mono text-primary tracking-[0.25em] uppercase flex items-center gap-2">
-                                <span className="w-1.5 h-1.5 bg-primary rounded-full" />
-                                [ CULTURA DE TRABALHO ]
-                            </div>
-                            <h3 className="text-3xl md:text-5xl font-display font-bold leading-tight">
-                                Seu problema é{" "}
-                                <span className="text-gradient">
-                                    meu problema.
-                                </span>
-                            </h3>
-                            <div className="space-y-4 font-body text-muted-foreground text-sm leading-relaxed">
-                                <p>
-                                    O principal lema da Infinitech reflete nossa valorização pelo trabalho em equipe e colaboração. Acreditamos que time unido alcança seus objetivos em comum e também transforma a forma como entregamos soluções aos nossos clientes.
-                                </p>
-                                <p className="border-l-2 border-primary/40 pl-4 italic text-foreground/90 font-mono text-xs">
-                                    Cada valor que cultivamos representa um pilar fundamental da nossa cultura e define como operamos, inovamos e crescemos juntos como uma empresa júnior.
-                                </p>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, x: 20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="relative flex items-center justify-center p-4 border border-border/60 bg-background/50 rounded-lg group"
-                        >
-                            <div className="absolute top-2 left-2 font-mono text-[8px] text-muted-foreground/50">
-                                + ASSET-REF: MVV_IMG
-                            </div>
-                            <div className="absolute bottom-2 right-2 font-mono text-[8px] text-accent/70">
-                                [ RENDERED_VIEW ]
-                            </div>
-                            <div className="p-2 w-full bg-gradient-to-b from-[rgba(39,179,255,0.80)] to-[rgba(51,245,255,0.80)] rounded relative">
-                                <img
-                                    className="translate-x-2 -translate-y-2 rounded shadow-xl transition-transform duration-300 group-hover:translate-x-0 group-hover:translate-y-0"
-                                    src={MVVImg}
-                                    alt="Seu problema é meu problema"
-                                />
-                            </div>
-                        </motion.div>
-                    </div>
-                </div>
-
                 {/* Header de Valores (Industrial) */}
                 <div className="border-b border-border/40 pb-6 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
                     <div>
@@ -185,7 +136,8 @@ export const MVVSectionIndustrial = () => {
                             [ PILARES CULTURAIS // ACRÓSTICO ]
                         </div>
                         <h3 className="text-3xl md:text-5xl font-display font-bold">
-                            Nossos <span className="text-gradient">Valores</span>
+                            Nossos{" "}
+                            <span className="text-gradient">Valores</span>
                         </h3>
                     </div>
                     <div className="font-mono text-xs text-muted-foreground uppercase tracking-widest border-l border-border/40 pl-3">
@@ -218,7 +170,9 @@ export const MVVSectionIndustrial = () => {
                                 <div className="space-y-2">
                                     <h4 className="font-display font-bold text-xl uppercase tracking-wide">
                                         {item.prev}
-                                        <span className="text-primary font-mono">{item.prefix}</span>
+                                        <span className="text-primary font-mono">
+                                            {item.prefix}
+                                        </span>
                                         {item.suffix}
                                     </h4>
                                     <p className="text-xs text-muted-foreground leading-relaxed">
@@ -230,6 +184,69 @@ export const MVVSectionIndustrial = () => {
                     ))}
                 </div>
 
+                {/* Seção "Seu problema é meu problema" em formato Blueprint / Industrial */}
+                <div className="border border-border/40 bg-secondary/5 relative overflow-hidden mb-20 p-8 md:p-12">
+                    <div className="absolute top-3 right-4 font-mono text-[9px] text-muted-foreground/40">
+                        [ CORE-PHILOSOPHY // LEMA-01 ]
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="space-y-6"
+                        >
+                            <div className="text-[10px] font-mono text-primary tracking-[0.25em] uppercase flex items-center gap-2">
+                                <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+                                [ CULTURA DE TRABALHO ]
+                            </div>
+                            <h3 className="text-3xl md:text-5xl font-display font-bold leading-tight">
+                                Seu problema é{" "}
+                                <span className="text-gradient">
+                                    meu problema.
+                                </span>
+                            </h3>
+                            <div className="space-y-4 font-body text-muted-foreground text-sm leading-relaxed">
+                                <p>
+                                    O principal lema da Infinitech reflete nossa
+                                    valorização pelo trabalho em equipe e
+                                    colaboração. Acreditamos que time unido
+                                    alcança seus objetivos em comum e também
+                                    transforma a forma como entregamos soluções
+                                    aos nossos clientes.
+                                </p>
+                                <p className="border-l-2 border-primary/40 pl-4 italic text-foreground/90 font-mono text-xs">
+                                    Cada valor que cultivamos representa um
+                                    pilar fundamental da nossa cultura e define
+                                    como operamos, inovamos e crescemos juntos
+                                    como uma empresa júnior.
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="relative flex items-center justify-center p-4 border border-border/60 bg-background/50 rounded-lg group"
+                        >
+                            <div className="absolute top-2 left-2 font-mono text-[8px] text-muted-foreground/50">
+                                + ASSET-REF: MVV_IMG
+                            </div>
+                            <div className="absolute bottom-2 right-2 font-mono text-[8px] text-accent/70">
+                                [ RENDERED_VIEW ]
+                            </div>
+                            <div className="p-2 w-full bg-gradient-to-b from-[rgba(39,179,255,0.80)] to-[rgba(51,245,255,0.80)] rounded relative">
+                                <img
+                                    className="translate-x-2 -translate-y-2 rounded shadow-xl transition-transform duration-300 group-hover:translate-x-0 group-hover:translate-y-0"
+                                    src={MVVImg}
+                                    alt="Seu problema é meu problema"
+                                />
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
             </div>
         </section>
     );
