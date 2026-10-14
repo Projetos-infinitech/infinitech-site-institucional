@@ -4,6 +4,12 @@ import { Plus, Globe2, Code2, LayoutTemplate, Bot } from "lucide-react";
 
 const services = [
     {
+        icon: LayoutTemplate,
+        title: "Desenvolvimento de Landing Page",
+        description:
+            "O desenvolvimento de landing page focada em conversão é o melhor caminho para campanhas e captação de leads. Criamos landing pages ultrarrápidas, otimizadas para mobile e estrategicamente desenhadas para converter visitantes em clientes.",
+    },
+    {
         icon: Globe2,
         title: "Desenvolvimento de Sites",
         description:
@@ -14,12 +20,6 @@ const services = [
         title: "Desenvolvimento de Sistemas",
         description:
             "Desenvolvimento de sistemas web sob medida e plataformas personalizadas para automatizar processos da sua empresa. Construímos sistemas de gestão robustos, escaláveis e de fácil utilização.",
-    },
-    {
-        icon: LayoutTemplate,
-        title: "Desenvolvimento de Landing Page",
-        description:
-            "O desenvolvimento de landing page focada em conversão é o melhor caminho para campanhas e captação de leads. Criamos landing pages ultrarrápidas, otimizadas para mobile e estrategicamente desenhadas para converter visitantes em clientes.",
     },
     {
         icon: Bot,
@@ -92,7 +92,9 @@ const ServicesSection = () => {
                                     <span className="flex items-center justify-center px-5 shrink-0">
                                         <Plus
                                             className={`text-primary transition-transform duration-300 ${
-                                                isOpen ? "rotate-45" : "rotate-0"
+                                                isOpen
+                                                    ? "rotate-45"
+                                                    : "rotate-0"
                                             }`}
                                             size={22}
                                         />
@@ -104,9 +106,15 @@ const ServicesSection = () => {
                                         <motion.div
                                             key="content"
                                             initial={{ height: 0, opacity: 0 }}
-                                            animate={{ height: "auto", opacity: 1 }}
+                                            animate={{
+                                                height: "auto",
+                                                opacity: 1,
+                                            }}
                                             exit={{ height: 0, opacity: 0 }}
-                                            transition={{ duration: 0.25, ease: "easeInOut" }}
+                                            transition={{
+                                                duration: 0.25,
+                                                ease: "easeInOut",
+                                            }}
                                             className="overflow-hidden"
                                         >
                                             <p className="text-sm text-muted-foreground leading-relaxed pl-[4.25rem] pr-5 pb-5">
