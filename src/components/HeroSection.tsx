@@ -1,82 +1,151 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, GraduationCap, ShieldCheck, Code2, Building2 } from "lucide-react";
 import HeroImage from "../assets/hero-img-with-blur.png";
-const HeroSection = () => {
+
+interface HeroSectionProps {
+    ready?: boolean;
+}
+
+const institutionalPillars = [
+    {
+        icon: Building2,
+        title: "IFSP Salto",
+        subtitle: "Instituto Federal de Educação, Ciência e Tecnologia",
+    },
+    {
+        icon: GraduationCap,
+        title: "Ciência da Computação & ADS",
+        subtitle: "Estudantes em formação técnica de nível superior",
+    },
+    {
+        icon: ShieldCheck,
+        title: "Movimento Empresa Júnior",
+        subtitle: "Chancela oficial Brasil Júnior e Núcleo Campinas",
+    },
+    {
+        icon: Code2,
+        title: "Engenharia de Software",
+        subtitle: "Desenvolvimento de sites, sistemas e landing pages",
+    },
+];
+
+const HeroSection = ({ ready = true }: HeroSectionProps) => {
     return (
         <section
-            className="relative min-h-screen flex items-center justify-center overflow-hidden  "
-            // style={{ backgroundImage: `url(${HeroImage})` }}
+            id="inicio"
+            className="relative min-h-screen bg-black text-white flex flex-col justify-between overflow-hidden pt-28 md:pt-36"
         >
-            {/* Subtle gradient background */}
+            {/* Team Photo Background with Cinematic Contrast Overlay */}
             <div
-                className="absolute inset-0 bg-center bg-cover bg-no-repeat overflow-hidden 
-             before:absolute before:inset-0 before:z-0
-             before:bg-[#2727B5]/50 
-             dark:before:bg-[#060636]/50"
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
                 style={{
-                    backgroundImage: `url(${HeroImage}), linear-gradient(lightgray, lightgray)`,
+                    backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.88) 0%, rgba(3, 15, 60, 0.65) 50%, rgba(0, 0, 0, 0.95) 100%), url(${HeroImage})`,
                 }}
-            ></div>
-            {/* <div
-                className="absolute inset-0 bg-center bg-cover bg-no-repeat overflow-hidden"
+            />
+
+            {/* Precision Grid Overlay */}
+            <div 
+                className="absolute inset-0 opacity-[0.04] pointer-events-none"
                 style={{
-                    backgroundImage: `url(${HeroImage})`,
+                    backgroundImage: `linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)`,
+                    backgroundSize: "60px 60px",
                 }}
-            ></div> */}
+            />
 
-            {/* Decorative shapes */}
-            <div className="absolute top-20 right-10 w-72 h-72 rounded-full bg-primary/5 blur-3xl" />
-            <div className="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-accent/5 blur-3xl" />
+            {/* Brand Ambient Glows */}
+            <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-r from-[#0357FF]/20 via-[#58D2FF]/15 to-[#18EF64]/20 blur-3xl pointer-events-none" />
 
-            <div className="relative container mx-auto px-4 text-center max-w-4xl pt-16">
+            {/* Main Content */}
+            <div className="relative container mx-auto px-4 md:px-8 max-w-5xl my-auto text-center z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7 }}
+                    animate={ready ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                    transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 >
-                    <span className="inline-block text-sm font-display font-semibold text-accent mb-6 tracking-widest uppercase color-[#C2FFDE]">
-                        EMPRESA JÚNIOR DE TECNOLOGIA DO IFSP - SALTO
-                    </span>
+                    {/* Badge with EJ Mint/Green Color */}
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#18EF64]/30 bg-[#18EF64]/10 backdrop-blur-md mb-8">
+                        <span className="w-2 h-2 rounded-full bg-[#18EF64] animate-pulse shadow-[0_0_8px_#18EF64]" />
+                        <span className="text-xs font-mono font-semibold tracking-[0.2em] text-[#C2FFDE] uppercase">
+                            EMPRESA JÚNIOR DE TECNOLOGIA DO IFSP - SALTO
+                        </span>
+                    </div>
 
+                    {/* FIAP Architectural Structure with Infinitech EJ Gradient */}
                     <h1 className="font-display text-center mb-6">
                         {/* 1º Span */}
-                        <span className="block text-white text-[18px] md:text-[24px] lg:text-[28px] font-normal leading-[84%] tracking-[-1px] lg:tracking-[-1.74px] [text-shadow:3px_3px_1.8px_rgba(0,0,0,0.25)] mt-2 mb-3 lg:mt-3 lg:mb-5">
+                        <span className="block text-white text-lg sm:text-2xl md:text-3xl font-normal tracking-tight mb-3">
                             Especialistas em desenvolvimento de sites, sistemas e landing pages
                         </span>
 
-                        {/* 2º Span - Gradiente e Uppercase */}
-                        <span className="block text-transparent bg-clip-text bg-[linear-gradient(180deg,#0357FF_21.63%,#58D2FF_42.79%,#18EF64_97.12%)] text-[34px] md:text-[62px] lg:text-[96px] font-bold leading-[85%] tracking-[-2px] md:tracking-[-4px] lg:tracking-[-7px] uppercase mb-2 lg:mb-4">
+                        {/* 2º Span - Signature Infinitech EJ Gradient */}
+                        <span className="block text-transparent bg-clip-text bg-[linear-gradient(180deg,#0357FF_21.63%,#58D2FF_42.79%,#18EF64_97.12%)] text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold uppercase leading-[0.92] tracking-tight mb-3">
                             SITES, SISTEMAS & LANDING PAGES
                         </span>
 
-                        {/* 3º Span - Uppercase */}
-                        <span className="block text-white text-[18px] md:text-[28px] lg:text-[36px] font-bold leading-[115%] tracking-[-1.5px] md:tracking-[-2px] lg:tracking-[-2.5px] uppercase">
+                        {/* 3º Span - Crisp White High Contrast */}
+                        <span className="block text-white text-lg sm:text-2xl md:text-3xl font-bold uppercase tracking-tight">
                             A SUA EMPRESA JÚNIOR DE TECNOLOGIA
                         </span>
                     </h1>
 
-                    <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
-                        Somos a <strong className="text-white">Empresa Júnior</strong> do IFSP. Entregamos excelência em <strong className="text-white">desenvolvimento de sites</strong>, <strong className="text-white">desenvolvimento de sistemas sob medida</strong> e <strong className="text-white">desenvolvimento de landing pages</strong> de alta performance.
+                    {/* Descriptive Paragraph */}
+                    <p className="text-base sm:text-lg text-zinc-300 max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
+                        Somos a <strong className="text-white font-semibold">Empresa Júnior</strong> do IFSP. Entregamos excelência em <strong className="text-white font-semibold">desenvolvimento de sites</strong>, <strong className="text-white font-semibold">sistemas sob medida</strong> e <strong className="text-white font-semibold">landing pages</strong> de alta performance.
                     </p>
 
+                    {/* Action buttons */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Button variant="hero" size="lg" asChild>
+                        <Button
+                            asChild
+                            size="lg"
+                            className="w-full sm:w-auto bg-gradient-to-r from-[#0357FF] via-[#58D2FF] to-[#18EF64] text-black hover:opacity-95 font-display font-bold text-base px-8 py-6 rounded-md transition-all shadow-[0_0_30px_rgba(88,210,255,0.3)] flex items-center justify-center gap-2 group"
+                        >
                             <a href="#contato">
                                 Solicitar Orçamento
-                                <ArrowRight className="ml-2" size={18} />
+                                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                             </a>
                         </Button>
+
                         <Button
-                            variant="hero-outline"
+                            variant="outline"
                             size="lg"
-                            className="bg-muted hover:bg-muted/80"
                             asChild
+                            className="w-full sm:w-auto border-white/20 bg-black/60 text-white hover:bg-white/10 hover:text-white font-display text-base px-8 py-6 rounded-md transition-all backdrop-blur-sm"
                         >
-                            <a href="#processo">Como Funciona</a>
+                            <a href="#diferencial">Conhecer Diferenciais</a>
                         </Button>
                     </div>
                 </motion.div>
+            </div>
+
+            {/* Authentic Institutional Pillars (100% Real Info, No Fabricated Metrics) */}
+            <div className="relative border-t border-white/10 bg-black/85 backdrop-blur-md mt-16 z-10">
+                <div className="container mx-auto px-4 max-w-7xl">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10 py-2">
+                        {institutionalPillars.map((item, index) => (
+                            <motion.div
+                                key={item.title}
+                                initial={{ opacity: 0, y: 15 }}
+                                animate={ready ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
+                                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                                className="p-5 sm:p-6 flex items-start gap-4"
+                            >
+                                <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-[#58D2FF] shrink-0 mt-0.5">
+                                    <item.icon size={20} />
+                                </div>
+                                <div className="space-y-1">
+                                    <h4 className="text-sm font-display font-bold text-white tracking-tight">
+                                        {item.title}
+                                    </h4>
+                                    <p className="text-xs text-zinc-400 leading-snug">
+                                        {item.subtitle}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
             </div>
         </section>
     );
